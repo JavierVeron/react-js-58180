@@ -1,8 +1,9 @@
 import './App.css'
 import Encabezado from './components/Encabezado';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Productos from './components/Productos';
 import Producto from './components/Producto';
+import ItemListContainer from './components/ItemListContainer';
+import Buscador from './components/Buscador';
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
     <>
     <BrowserRouter>
       <Encabezado />
+      <Buscador />
       <Routes>
-        <Route path="/" element={<Productos />} />
+        <Route path="/" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<Producto />} />
       </Routes>
     </BrowserRouter>
